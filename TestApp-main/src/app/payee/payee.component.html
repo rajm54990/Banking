@@ -1,0 +1,97 @@
+<nav class="navbar navbar-expand-lg" style="background-color: #bc5eff; color: #ffffff;">
+  <i class="bi bi-bank"></i>
+
+  <h2 style="color: white; padding: 10px; transform: translateY(10px);">.NB</h2>
+  <div class="spacer"></div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" 
+  aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div style="color:aliceblue" class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      
+      <li ngbDropdown style="color:aliceblue"  class="nav-item dropdown">
+          <a ngbDropdownToggle style="color:aliceblue" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" 
+          aria-expanded="false">
+           Account Details
+          </a>
+          <div ngbDropdownMenu  style="background-color:white;"class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a ngbDropdownItem  routerLink="/accountsummary" style="color: #bc5eff;"class="dropdown-item" >Account Summary</a>
+            <a ngbDropdownItem  routerLink="/accountstatement" style="color: #bc5eff;" class="dropdown-item">Account Transactions</a>
+          </div>
+        </li>
+        <li ngbDropdown style="color:aliceblue"  class="nav-item dropdown">
+          <a ngbDropdownToggle style="color:aliceblue" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Fund Transfer
+          </a>
+          <div ngbDropdownMenu  style="background-color:white;"class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a ngbDropdownItem routerLink="/payee" style="color: #bc5eff;"class="dropdown-item"  href="#">Payee</a>
+            <a ngbDropdownItem routerLink="/neft" style="color: #bc5eff;"class="dropdown-item"  href="#">NEFT</a>
+            <a ngbDropdownItem routerLink="/rtgs" style="color: #bc5eff;" class="dropdown-item" href="#">RTGS</a>
+            <a ngbDropdownItem routerLink="/imps" style="color: #bc5eff;" class="dropdown-item" href="#">IMPS</a>
+          </div>
+        </li>
+
+      <li class="nav-item">
+        <a style="color:aliceblue"  routerLink="/profile"  class="nav-link">User Profile</a>
+      </li>
+
+      <li ngbDropdown style="color:aliceblue"  class="nav-item dropdown">
+        <a ngbDropdownToggle style="color:aliceblue" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Change Passwords
+        </a>
+        <div ngbDropdownMenu  style="background-color:white;"class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a ngbDropdownItem  routerLink="/forgot-passaword" style="color: #bc5eff;"class="dropdown-item"  href="#">Reset Login Password</a>
+          <a ngbDropdownItem  routerLink="/forgot-transaction" style="color: #bc5eff;" class="dropdown-item" href="#">Reset Transaction Password</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a style="color:aliceblue" class="nav-link" (click)="deleteCookie()">Logout</a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+
+
+<div class="p-3 mb-2">
+  <h2 style="text-align:center;">Add New Beneficiary</h2>
+  </div>
+  <form>
+
+    <div class="form-group row">
+      <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Beneficiary Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control form-control-lg" name="BeneficiaryName" [(ngModel)]="BeneficiaryName" style="width:400px;" ><br>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg" >Beneficiary Account Number </label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control form-control-lg" name="BeneficiaryAccountNo" [(ngModel)]="BeneficiaryAccountNo" style="width:400px;" ><br>
+        
+      </div>
+    </div>
+    <div class="form-group row" >
+      <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Re-Enter Account Number</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control form-control-lg" name="BeneficiaryAccountNo" [(ngModel)]="BeneficiaryAccountNo"style="width:400px;"  ><br>
+      </div>
+      
+    </div>
+    <div class="form-group row" >
+      <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Nick Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control form-control-lg" name="NickName" [(ngModel)]="NickName"style="width:400px;" ><br>
+      </div>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" class="myinput large custom" value="" id="flexCheckDefault">
+      <label class="form-check-label" for="flexCheckDefault">
+        Save Beneficiary
+      </label>
+    </div>
+    <div class="button">
+    <button class="btn btn-primary" type="submit" (click)="addpayee()" style="background-color:#bc5eff; font-size: 1em;">Save As Beneficiary</button>
+  </div>
+  </form>

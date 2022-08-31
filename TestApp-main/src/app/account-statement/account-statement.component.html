@@ -1,0 +1,95 @@
+<nav class="navbar navbar-expand-lg" style="background-color: #bc5eff; color: #ffffff;">
+  <i class="bi bi-bank"></i>
+  
+  <h2 style="color: white; padding: 10px; transform: translateY(10px);">.NB</h2>
+  <div class="spacer"></div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" 
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div style="color:aliceblue" class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      
+      <li ngbDropdown style="color:aliceblue"  class="nav-item dropdown">
+          <a ngbDropdownToggle style="color:aliceblue" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Account Details
+          </a>
+          <div ngbDropdownMenu  style="background-color:white;"class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a ngbDropdownItem  routerLink="/accountsummary" style="color: #bc5eff;"class="dropdown-item" >Account Summary</a>
+            <a ngbDropdownItem  routerLink="/accountstatement" style="color: #bc5eff;" class="dropdown-item">Account Transactions</a>
+          </div>
+        </li>
+        <li ngbDropdown style="color:aliceblue"  class="nav-item dropdown">
+          <a ngbDropdownToggle style="color:aliceblue" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Fund Transfer
+          </a>
+          <div ngbDropdownMenu  style="background-color:white;"class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a ngbDropdownItem routerLink="/payee" style="color: #bc5eff;"class="dropdown-item"  href="#">Payee</a>
+            <a ngbDropdownItem routerLink="/neft" style="color: #bc5eff;"class="dropdown-item"  href="#">NEFT</a>
+            <a ngbDropdownItem routerLink="/rtgs" style="color: #bc5eff;" class="dropdown-item" href="#">RTGS</a>
+            <a ngbDropdownItem routerLink="/imps" style="color: #bc5eff;" class="dropdown-item" href="#">IMPS</a>
+          </div>
+        </li>
+
+      <li class="nav-item">
+        <a style="color:aliceblue"  routerLink="/profile"  class="nav-link">User Profile</a>
+      </li>
+
+      <li ngbDropdown style="color:aliceblue"  class="nav-item dropdown">
+        <a ngbDropdownToggle style="color:aliceblue" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" 
+        aria-haspopup="true" aria-expanded="false">
+         Change Passwords
+        </a>
+        <div ngbDropdownMenu  style="background-color:white;"class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a ngbDropdownItem  routerLink="/forgot-passaword" style="color: #bc5eff;"class="dropdown-item"  href="#">Reset Login Password</a>
+          <a ngbDropdownItem  routerLink="/forgot-transaction" style="color: #bc5eff;" class="dropdown-item" href="#">Reset Transaction Password</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a style="color:aliceblue" class="nav-link" (click)="deleteCookie()">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+  
+  <div class="container-fluid  p-2 my-4 bg-dark text-white" style="text-align:center;">
+    <h1 style="transform:translateY(5px);">Account Statement</h1>
+  </div> 
+
+  <!-- <div class="balance" name="acc_bal" [(ngModel)]="acc_bal">
+    {{'Your account balance is '+ acc_bal}}
+  </div> -->
+ 
+    <table class="table table-striped">
+        <thead class="thead-light">
+            <tr style="font-size:17px">
+              <th scope="col">Transaction Id</th>
+              <th scope="col">From Account</th>          
+              <th scope="col">To Account</th>            
+              <th scope="col">Amount</th>  
+            </tr>
+        </thead>
+        <tbody>
+
+
+            <tr *ngFor="let Acc of arr" style="font-size:17px">
+              <td>
+                {{Acc.ID}}
+              </td> 
+              <td>
+                {{ Acc.fromAcc }}
+                
+              </td>
+              <td>
+              {{ Acc.toAcc}}
+              
+              </td>
+              <td>
+             {{ Acc.amount }}
+              </td>
+            </tr>  
+        </tbody>
+    </table>
+   
+
+  

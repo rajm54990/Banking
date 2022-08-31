@@ -1,0 +1,60 @@
+
+.spacer{
+    flex:8 8 auto;
+}
+.navbar-light{
+    background-color: #4A4DE7;
+}
+.dropdown-item:hover{
+    background-color:lightgray;
+}
+.link{
+ font-size:17px;
+}
+.fa {
+    padding: 20px;
+    font-size: 25px;
+    width: 70px;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 1px;
+    border-radius:50%;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .fa-google {
+    background: #867775;
+    color: white;
+  }
+  
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+.cards{
+  position: relative;
+  left: 5%;
+}
+.footer{
+  position: relative;
+  text-align: center ;
+}
+.centered {
+  position: absolute;
+  top: 17%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

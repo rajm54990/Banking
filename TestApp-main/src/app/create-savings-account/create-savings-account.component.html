@@ -1,0 +1,117 @@
+<nav class="navbar  navbar-expand-lg" style="background-color: #bc5eff; color: #ffffff;">
+  <div class="container-fluid"> 
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bank" viewBox="0 0 16 16">
+      <path d="M8 .95 14.61 4h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.379l.5 2A.5.5 0 0 1 15.5 17H.5a.5.5 0 0 1-.485-.621l.5-2A.5.5 0 0 1 1 14V7H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 4h.89L8 .95zM3.776 4h8.447L8 2.05 3.776 4zM2 7v7h1V7H2zm2 0v7h2.5V7H4zm3.5 0v7h1V7h-1zm2 0v7H12V7H9.5zM13 7v7h1V7h-1zm2-1V5H1v1h14zm-.39 9H1.39l-.25 1h13.72l-.25-1z"/>
+    </svg> -->
+    <div class="spacer_logo"></div>  
+  <a  routerLink="/aboutbank" style="transform:translateY(17px); margin-left:5px; color: aliceblue;font-size:20px;" 
+  class="navbar-brand" href="#">.NB</a>
+  <div class="spacer"></div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a routerLink="/login" class="nav-link active" style="color: #ffffff;">Login</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/register" class="nav-link active" style="color: #ffffff;">Register</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/internet-banking" class="nav-link active" style="color: #ffffff;">Internet Banking</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/create new account" class="nav-link active" style="color: #ffffff;">Create New Account</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="body">
+  <div class = "container-fluid mb-5">
+    <h1 style="text-align:center;margin-top:40px;">Create  a Savings Account</h1>
+        <form #userForm="ngForm">
+          <div class = "form-group row">
+            <label><strong>Title</strong></label>
+            <input class="form-control" type="text" name="title" [(ngModel)]="title"/>
+            
+          </div>
+          <div class = "form-group row">
+            <label><strong>First Name</strong></label>
+            <input class="form-control" type="text" name="firstName" [(ngModel)]="firstName"/>
+           
+          </div>
+          <div class = "form-group row">
+            <label><strong>Middle Name</strong></label>
+            <input class="form-control" type="text" name="middleName" [(ngModel)]="middleName"/>
+    
+          </div>
+          <div class = "form-group row">
+            <label><strong>Last Name</strong></label>
+            <input class="form-control" type="text" name="lastName" [(ngModel)]="lastName"/>
+           
+          </div>
+          <div class = "form-group row">
+            <label><strong>Father's Name</strong></label>
+            <input  class="form-control" type="text" name="fatherName" [(ngModel)]="fatherName"/>
+      
+          </div>
+          
+          <div class = "form-group row">
+            <label><strong>Mobile Number</strong></label>
+            <input class="form-control" type="text" name="mobileNumber" [(ngModel)]="mobileNumber"/>
+            
+          </div>
+          <div class = "form-group row">
+            <label><strong>Email ID</strong></label>
+            <input class="form-control"  type="text" name="emailId" required [(ngModel)]="emailId"/>
+          </div>
+        
+          <div class = "form-group row">
+              <label><strong>Address Line 1</strong></label>
+              <input  class="form-control" type="text" name="addressLine1" [(ngModel)]="addressLine1"/>
+          </div>
+            <div class = "form-group row">
+              <label><strong>Address Line 2</strong></label>
+              <input  class="form-control" type="text" name="addressLine2" [(ngModel)]="addressLine2"/>
+            </div>
+            <div class = "form-group row">
+              <label><strong>LandMark</strong></label>
+              <input  class="form-control" type="text" name="landmark" [(ngModel)]="landmark"/>
+            </div>
+            <div class = "form-group row">
+              <label><strong>State</strong></label>
+              <input  class="form-control" type="text" name="state" [(ngModel)]="state"/>
+            </div>
+            <div class = "form-group row">
+              <label><strong>City</strong></label>
+              <input   class="form-control" type="text" name="city" [(ngModel)]="city"/>
+            </div>
+            <div class = "form-group row">
+              <label><strong>Pincode</strong></label>
+              <input   class="form-control" type="text" name="pincode" [(ngModel)]="pincode"/>
+            </div>
+            <div class = "form-group row">
+              <label><strong>Aadhar Card Number</strong></label>
+              <input  class="form-control" type="text" name="aadharNumber" [(ngModel)]="aadharNumber"/>
+            </div>
+          <div class="form-group row"> 
+            <label><strong>Occupation Type</strong></label>
+            <input type="text"  class="form-control" name="occupationType" [(ngModel)]="occupationType"/>
+          </div>
+          <div class="form-group row"> 
+            <label><strong>Source Of Income</strong></label>
+            <input type="text"  class="form-control" name="sourceOfIncome" [(ngModel)]="sourceOfIncome"/>
+          </div>
+          <div class="form-group row"> 
+            <label><strong> Annual Income</strong></label>
+            <input type="text" class="form-control" name="grossAnnualIncome" [(ngModel)]="grossAnnualIncome"/>
+          </div>
+          <div class="form-check row">
+            <input type="checkbox" class="form-check-input" selected name="agreeFlag">
+            <label>I agree</label>
+          </div>
+          <div>
+            <button class="btn btn-primary" (click)="createAccount()" type="submit" style="background-color:#bc5eff; font-size: 1em;">Submit</button>
+          </div>
+        </form>
+    </div>
+</div>

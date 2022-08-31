@@ -1,0 +1,46 @@
+<div class="container-fluid  p-2 my-4 bg-dark text-white" style="text-align:center;">
+    <h1 style="transform:translateY(5px);">List of Customers</h1>
+  </div> 
+    <div class="container" >
+    <table class="table table-striped">
+    <thead class="thead-light">
+  <tr style="font-size:17px">
+    <th scope="col">CustomerId</th>
+    <th scope="col">Applicant Name</th>
+    <th scope="col">Email id</th>
+    <th scope="col">FatherName</th>
+    <th scope="col">Address</th>
+    <th scope="col">Aaadhar Number</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let registration of list" id="{{registration.AadharNumber}}"style="font-size:17px">
+    <td>
+    {{registration.CustomerId }}
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+    <td >
+	{{registration.FirstName+' '+registration.MiddleName+' '+registration.LastName}}
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+    <td>
+	{{registration.EmailId }}
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+    <td>
+	{{registration.FatherName}}
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <td>
+	{{registration.AddressLine1+" "+registration.City+" "+registration.State}}
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+    <td>
+	{{registration.AadharNumber}}
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+ 
+  <br/>

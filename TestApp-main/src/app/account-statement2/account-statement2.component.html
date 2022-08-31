@@ -1,0 +1,146 @@
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0245A3;">
+  <i class="bi bi-bank"></i>
+  <svg xmlns="http://www.w3.org/2000/svg" style="margin-left: 5px;" width="30" height="30" fill="currentColor" class="bi bi-bank" viewBox="0 0 16 16">
+      <path d="M8 .95 14.61 4h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.379l.5 2A.5.5 0 0 1 15.5 17H.5a.5.5 0 0 1-.485-.621l.5-2A.5.5 0 0 1 1 14V7H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 4h.89L8 .95zM3.776 4h8.447L8 2.05 3.776 4zM2 7v7h1V7H2zm2 0v7h2.5V7H4zm3.5 0v7h1V7h-1zm2 0v7H12V7H9.5zM13 7v7h1V7h-1zm2-1V5H1v1h14zm-.39 9H1.39l-.25 1h13.72l-.25-1z"/>
+    </svg>
+  <h2 style="color: white; padding: 10px; transform: translateY(10px);">Trust your Money with us</h2>
+  <div class="spacer"></div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div style="color:aliceblue" class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      
+      <li ngbDropdown style="color:aliceblue"  class="nav-item dropdown">
+          <a ngbDropdownToggle style="color:aliceblue" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Account Details
+          </a>
+          <div ngbDropdownMenu  style="background-color:white;"class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a ngbDropdownItem  routerLink="/accountsummary" style="color: #4A4DE7;"class="dropdown-item" >Account Summary</a>
+            <a ngbDropdownItem  routerLink="/accountstatement" style="color: #4A4DE7;" class="dropdown-item">Account Transactions</a>
+          </div>
+        </li>
+        <li ngbDropdown style="color:aliceblue"  class="nav-item dropdown">
+          <a ngbDropdownToggle style="color:aliceblue" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Fund Transfer
+          </a>
+          <div ngbDropdownMenu  style="background-color:white;"class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a ngbDropdownItem routerLink="/payee" style="color: #4A4DE7;"class="dropdown-item"  href="#">Payee</a>
+            <a ngbDropdownItem routerLink="/neft" style="color: #4A4DE7;"class="dropdown-item"  href="#">NEFT</a>
+            <a ngbDropdownItem routerLink="/rtgs" style="color: #4A4DE7;" class="dropdown-item" href="#">RTGS</a>
+            <a ngbDropdownItem routerLink="/imps" style="color: #4A4DE7;" class="dropdown-item" href="#">IMPS</a>
+          </div>
+        </li>
+
+      <li class="nav-item">
+        <a style="color:aliceblue"  routerLink="/profile"  class="nav-link">User Profile</a>
+      </li>
+
+      <li ngbDropdown style="color:aliceblue"  class="nav-item dropdown">
+        <a ngbDropdownToggle style="color:aliceblue" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Change Passwords
+        </a>
+        <div ngbDropdownMenu  style="background-color:white;"class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a ngbDropdownItem  routerLink="/forgot-passaword" style="color: #4A4DE7;"class="dropdown-item"  href="#">Reset Login Password</a>
+          <a ngbDropdownItem  routerLink="/forgot-transaction" style="color: #4A4DE7;" class="dropdown-item" href="#">Reset Transaction Password</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+  <div class="container-fluid  p-2 my-4 bg-dark text-white" style="text-align:center;">
+    <h1 style="transform:translateY(5px);">Account Statement</h1>
+  </div> 
+  
+  <div class="container" >
+  <table class="table table-striped">
+  <thead class="thead-light"></thead>
+  <tbody>
+    <tr>
+    <th >Accno</th>
+    <td>{{Accno}}</td>
+    </tr>
+    <tr>
+    <th scope="col">AccType</th>
+    <td>{{AccType}}</td>
+    </tr>
+    <tr>
+    <th scope="col">Branch</th>
+    <td>{{branch}}</td>
+    </tr>
+    <tr>
+    <th scope="col">address</th>
+    <td>{{address}}</td>
+    </tr>
+    <tr>
+    <th scope="col">AccountName</th>
+    <td>{{AccountName}}</td>
+    </tr>
+    <tr>
+    <th scope="col">InterestRate</th>
+    <td>{{InterestRate}}</td>
+    </tr>
+    <tr>
+    <th scope="col">DrawingPower</th>
+    <td>{{DrawingPower}}</td>
+    </tr>
+    <tr>
+    <th scope="col">MODBalance</th>
+    <td>{{MODBalance}}</td>
+    </tr>
+    <tr>
+    <th scope="col">CustomerID</th>
+    <td>{{CustomerID}}</td>
+    </tr>
+    <tr>
+    <th scope="col">IFSCCode</th>
+    <td>{{IFSCCode}}</td>
+    </tr>
+    <tr>
+    <th scope="col">MICRCode</th>
+    <td>{{MICRCode}}</td>
+    </tr>
+    <tr>
+    <th scope="col">Balance</th>
+    <td>{{Balance}}</td>
+    </tr>
+  </tbody>
+  </table>
+  </div><br/>
+  <h2><u><a href="#" style="color:#4A4DE7;margin-left:150px;">View Another Statement</a></u></h2>
+  <div class="container-fluid p-1 bg-dark text-white" *ngIf="transFlag">
+    <h2 style="padding-top:10px;margin-left:220px;">Number of Transactions {{noOfTransactions}}</h2></div>
+    <br/>
+    <br/>
+  
+    <div class="container" *ngIf="transFlag">
+      <table class="table table-striped">
+      <thead class="thead-light">
+      
+      <tr style="font-size:17px">
+        <th scope="col">Date</th>
+        <th scope="col">Narration</th>
+        <th scope="col">Ref/Cheque No.</th>
+        <th scope="col">Debit</th>
+        <th scope="col">Credit</th>
+        <th scope="col">Debit</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let transac of Transactions" style="font-size:17px">
+        
+        <td >
+          {{transac.date}}</td>
+        <td>
+          {{ transac.Narration}}
+        </td>
+        <td>{{ transac.Cheque}}</td>
+        <td>{{ transac.Debit}}</td>
+        <td>{{ transac.Credit}}</td>
+        <td>{{ transac.Balance}}</td>
+      </tr>
+      </tbody>
+      </table>
+      </div><br/>
+      <h2 style="color:fuchsia;margin-left:220px;">**This is a Computer generated statement and does not require a signature</h2>
+      <button  style="transform:translate(-50%,-50%);position:relative;left:50%;margin-top:30px;margin-bottom:10px;"class="btn btn-success btn-lg btn-outline">Print</button>

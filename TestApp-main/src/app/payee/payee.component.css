@@ -1,0 +1,23 @@
+form{
+  margin-left:30%;
+  margin-top: 5%;
+  width:80%;
+  position: relative;
+  top:-10%
+}
+
+.form-group row{
+  padding:10px;
+}
+.btn {
+
+  margin: .375rem; padding: .90rem 2.5rem;
+   }
+.button{
+    position: relative;
+    top: 20px;
+    left: 20%;    
+  }
+  .spacer{
+    flex:8 8 auto;
+    }

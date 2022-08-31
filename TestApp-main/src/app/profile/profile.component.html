@@ -1,0 +1,147 @@
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #bc5eff;">
+  <i class="bi bi-bank"></i>
+  <h2 style="color: white; padding: 10px; transform: translateY(10px);">.NB</h2>
+  <div class="spacer"></div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div style="color:aliceblue" class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      
+      <li ngbDropdown style="color:aliceblue"  class="nav-item dropdown">
+          <a ngbDropdownToggle style="color:aliceblue" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Account Details
+          </a>
+          <div ngbDropdownMenu  style="background-color:white;"class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a ngbDropdownItem  routerLink="/accountsummary" style="color: #bc5eff;"class="dropdown-item" >Account Summary</a>
+            <a ngbDropdownItem  routerLink="/accountstatement" style="color: #bc5eff;" class="dropdown-item">Account Transactions</a>
+          </div>
+        </li>
+        <li ngbDropdown style="color:aliceblue"  class="nav-item dropdown">
+          <a ngbDropdownToggle style="color:aliceblue" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Fund Transfer
+          </a>
+          <div ngbDropdownMenu  style="background-color:white;"class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a ngbDropdownItem routerLink="/payee" style="color: #4A4DE7;"class="dropdown-item"  href="#">Payee</a>
+            <a ngbDropdownItem routerLink="/neft" style="color: #4A4DE7;"class="dropdown-item"  href="#">NEFT</a>
+            <a ngbDropdownItem routerLink="/rtgs" style="color: #4A4DE7;" class="dropdown-item" href="#">RTGS</a>
+            <a ngbDropdownItem routerLink="/imps" style="color: #4A4DE7;" class="dropdown-item" href="#">IMPS</a>
+          </div>
+        </li>
+
+      <li class="nav-item">
+        <a style="color:aliceblue"  routerLink="/profile"  class="nav-link">User Profile</a>
+      </li>
+
+      <li ngbDropdown style="color:aliceblue"  class="nav-item dropdown">
+        <a ngbDropdownToggle style="color:aliceblue" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Change Passwords
+        </a>
+        <div ngbDropdownMenu  style="background-color:white;"class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a ngbDropdownItem  routerLink="/forgot-passaword" style="color: #4A4DE7;"class="dropdown-item"  href="#">Reset Login Password</a>
+          <a ngbDropdownItem  routerLink="/forgot-transaction" style="color: #4A4DE7;" class="dropdown-item" href="#">Reset Transaction Password</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a style="color:aliceblue" class="nav-link" (click)="deleteCookie()">Logout</a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+<!-- <div>
+  <h2 style="color: #FF80B0; padding-left: 110px;">
+    {{'Hello '+welcome+' !!'}}
+  </h2>
+</div> -->
+
+<div class="container-fluid  p-2 my-4 bg-dark text-white" style="text-align:center;">
+  <h1 style="transform:translateY(5px);">Account Details</h1>
+</div> 
+
+<div class="container" >
+<table class="table table-striped">
+<thead class="thead-light"></thead>
+<tbody>
+
+  <tr>
+  <th >Account Number</th>
+  <td>{{Account_Number}}</td>
+  </tr>
+
+  <tr>
+  <th scope="col">Balance</th>
+  <td>{{Balance}}</td>
+  </tr>
+
+  <tr>
+  <th scope="col">First Name</th>
+  <td>{{firstName}}</td>
+  </tr>
+
+  <tr>
+  <th scope="col">Middle Name</th>
+  <td>{{middleName}}</td>
+  </tr>
+
+  <tr>
+    <th scope="col">Last Name</th>
+    <td>{{lastName}}</td>
+  </tr>
+
+  <tr>
+    <th scope="col">Father's Name</th>
+    <td>{{fatherName}}</td>
+  </tr>
+
+  <tr>
+    <th scope="col">Phone Number</th>
+    <td>{{phoneNumber}}</td>
+  </tr>
+
+  <tr>
+    <th scope="col">Aadhar Number</th>
+    <td>{{aadharNumber}}</td>
+  </tr>
+
+  <tr>
+    <th scope="col">emailId</th>
+    <td>{{emailId}}</td>
+  </tr>
+
+  <tr>
+    <th scope="col">state</th>
+    <td>{{state}}</td>
+  </tr>
+
+  <tr>
+    <th scope="col">state</th>
+    <td>{{state}}</td>
+  </tr>
+
+  <tr>
+  <th scope="col">city</th>
+  <td>{{city}}</td>
+  </tr>
+
+  <tr>
+    <th scope="col">pincode</th>
+    <td>{{pincode}}</td>
+  </tr>
+
+  <tr>
+      <th scope="col">AddressLine1</th>
+      <td>{{addressLine1}}</td>
+  </tr>
+
+  <tr>
+    <th scope="col">AddressLine2</th>
+    <td>{{addressLine2}}</td>
+  </tr>
+
+ 
+</tbody>
+</table>
+</div><br/>
+
+

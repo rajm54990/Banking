@@ -1,0 +1,66 @@
+.img-responsive{
+  height: 100%;
+  width: 130%;
+  margin:0;
+}
+h1{
+  font-weight: bold;
+  color:dodgerblue;
+
+  margin-left: 50%;
+}
+.spacer{
+  flex:8 8 auto;
+}
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-left: 75%;
+}
+
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+.p1{
+   margin-left:150%;
+   width:100%
+}
+.p2{
+  margin-left: 110%;
+   width:100%
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 70%;
+  opacity: 0.9;
+  margin-left: 90%;
+
+}
+.btn:hover {
+  opacity: 1;
+}
+a{
+  cursor: pointer;
+}

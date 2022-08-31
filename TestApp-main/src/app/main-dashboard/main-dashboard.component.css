@@ -1,0 +1,12 @@
+.spacer{
+flex:8 8 auto;
+}
+.navbar-light{
+    background-color: #4A4DE7;
+}
+.dropdown-item:hover{
+    background-color:lightgray;
+}
+.link{
+ font-size:17px;
+}

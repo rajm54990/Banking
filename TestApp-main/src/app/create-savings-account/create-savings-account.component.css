@@ -1,0 +1,23 @@
+.form-group{
+    width:450px;
+    left:50%;
+    top:60px;
+    position:relative;
+    transform:translate(-50%,-50%);
+}
+.form-check{
+    width:350px;
+    left:50%;
+    top:70px;
+    position:relative;
+    transform:translate(-50%,-50%);
+}
+.btn{
+    left:50%;
+    top:70px;
+    position:relative;
+    transform:translate(-50%,-50%);
+}
+  .spacer{
+    flex:8 8 auto;
+  }
